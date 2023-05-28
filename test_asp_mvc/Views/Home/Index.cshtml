@@ -1,0 +1,89 @@
+﻿@*Cách truyền thẳng vào view
+    @model int*@
+
+@*Cach 5
+    @model test_asp_mvc.Models.clsSinhVien*@
+
+@*// dùng cái này cho lẹ*@
+@model List<test_asp_mvc.Models.clsSinhVien>
+
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "Home";
+    ViewBag.active = 1;
+
+    //Này là ép kiểu mà ít muốn dùng quá
+    //test_asp_mvc.Models.clsSinhVien sv1 = (test_asp_mvc.Models.clsSinhVien)ViewBag.sv1;
+
+}
+<main>
+    <div class="page-section features text-center" style="margin: 150px 0px;">
+        Con số từ controller truyền sang view cách 1: @ViewBag.A
+        <br />
+        Con số từ controller truyền sang view cách 2: @ViewBag.B
+        <br />
+        Con số từ controller truyền sang view cách 3: @ViewBag.C
+        <br />
+        @*Con số từ controller truyền sang view truyền thẳng vào view cách 4: @Model*@
+        <br />
+        @*Con số từ controller truyền sang view truyền thẳng vào view cách 5: @Model.HoTen*@
+        <br />
+        Con số từ controller truyền sang view truyền thẳng vào view cách 6
+        <h3>
+            Table cach 6
+        </h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Ma so
+                    </th>
+                    <th>
+                        Ho ten
+                    </th>
+                    <th>
+                        Lop
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @*// dùng foreach để đẩy dữ liệu ra*@
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.ID
+                        </td>
+                        <td>
+                            @item.MaSo
+                        </td>
+                        <td>
+                            @item.HoTen
+                        </td>
+                        <td>
+                            @item.Lop
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+        
+    </div>
+</main>
+
+@section LienHe{
+    <div class="col-lg-3 py-3">
+        <h3>Nhat<span class="text-primary">1</span></h3>
+        <p>Le Minh Nhat 1</p>
+
+        <p><a href="#">digigram@mail.com</a></p>
+        <p><a href="#">+00 1122 3344 5566</a></p>
+    </div>
+}
