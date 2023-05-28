@@ -148,6 +148,10 @@
     <Content Include="Views\News\New.cshtml" />
     <Content Include="Views\Contact\Contact.cshtml" />
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
+    <Content Include="Views\About\HaiMayGiaThapNhat.cshtml" />
+    <Content Include="Views\About\HaiMayGiaCaoNhat.cshtml" />
+    <Content Include="Views\About\SapXepGiamDan.cshtml" />
+    <Content Include="Views\About\HangAsus.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

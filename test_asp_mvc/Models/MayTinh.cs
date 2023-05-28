@@ -21,42 +21,42 @@ namespace test_asp_mvc.Models
             danhSachMayTinh.Add(new MayTinh()
             {
                 MaMay = "0000001",
-                DongMay = "Asus 01",
+                DongMay = "chán đời",
                 GiaBan = 100000,
                 NgaySanXuat = new DateTime(2022, 1, 1),
-                HangSanXuat = "Asus1",
+                HangSanXuat = "Asus",
             });
             danhSachMayTinh.Add(new MayTinh()
             {
                 MaMay = "0000002",
-                DongMay = "Asus 02",
+                DongMay = "nát",
                 GiaBan = 200000,
                 NgaySanXuat = new DateTime(2022, 1, 1),
-                HangSanXuat = "Asus2",
+                HangSanXuat = "Dell",
             });
             danhSachMayTinh.Add(new MayTinh()
             {
                 MaMay = "0000003",
-                DongMay = "Asus 03",
+                DongMay = "lỏ chày",
                 GiaBan = 300000,
                 NgaySanXuat = new DateTime(2022, 1, 1),
-                HangSanXuat = "Asus3",
+                HangSanXuat = "Asus",
             });
             danhSachMayTinh.Add(new MayTinh()
             {
                 MaMay = "0000004",
-                DongMay = "Asus 04",
+                DongMay = "dòng tào lao",
                 GiaBan = 400000,
                 NgaySanXuat = new DateTime(2022, 1, 1),
-                HangSanXuat = "Asus4",
+                HangSanXuat = "Toshiba",
             });
             danhSachMayTinh.Add(new MayTinh()
             {
                 MaMay = "0000005",
-                DongMay = "Asus 05",
+                DongMay = "tùm lum",
                 GiaBan = 500000,
                 NgaySanXuat = new DateTime(2022, 1, 1),
-                HangSanXuat = "Asus5",
+                HangSanXuat = "Acer",
             });
 
             return danhSachMayTinh;
