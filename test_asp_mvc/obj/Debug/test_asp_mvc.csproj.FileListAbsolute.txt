@@ -137,7 +137,6 @@ C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\bin\System.Web.Webpages.Raz
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\bin\System.Web.Helpers.xml
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\bin\System.Web.Mvc.xml
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.csproj.AssemblyReference.cache
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.csproj.CoreCompileInputs.cache
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.csproj.CopyComplete
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.dll

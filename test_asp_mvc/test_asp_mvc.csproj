@@ -126,6 +126,7 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -133,7 +134,9 @@
     </Compile>
     <Compile Include="Helper\MathHelper.cs" />
     <Compile Include="Models\clsSinhVien.cs" />
+    <Compile Include="Models\DanhSachKhachHang.cs" />
     <Compile Include="Models\DanhSachMayTinh.cs" />
+    <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\MayTinh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -155,6 +158,8 @@
     <Content Include="Views\About\HangAsus.cshtml" />
     <Content Include="Views\Services\Them.cshtml" />
     <Content Include="Views\Services\Them2.cshtml" />
+    <Content Include="Views\KhachHang\DanhSach.cshtml" />
+    <Content Include="Views\KhachHang\Themmoi.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
