@@ -60,9 +60,25 @@ namespace test_asp_mvc.Controllers
             //});
 
 
-            // cách này nhanh vcl
-            DanhSachMayTinh.listMayTinh.Add(thongso);
-            return RedirectToAction("Services");
+            // cách này nhanh vclc
+            //DanhSachMayTinh.listMayTinh.Add(thongso);
+
+
+            // cách này nhanh vcl kèm theo thông báo lỗi
+            if(ModelState.IsValid == true)
+            {
+                DanhSachMayTinh.listMayTinh.Add(thongso);
+                return RedirectToAction("Services");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Ban chua nhap du du lieu");
+                return View(thongso);
+            }
+
+
+
+            //return RedirectToAction("Services");
         }
     }
 }
