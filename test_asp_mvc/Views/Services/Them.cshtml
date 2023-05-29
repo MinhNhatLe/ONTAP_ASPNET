@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.Title = "Services";
+    ViewBag.active = 3;
+}
+
+<main>
+    <div class="page-section">
+        <div class="container">
+            <div>
+                <a href="~/Services/Services">trang services</a>
+            </div>
+            <h3>
+                Them san pham
+            </h3>
+            <form action="~/Services/LuuSanPham" method="post">
+                <div class="form-group">
+                    <label for="MaMay">Ma may</label>
+                    <input type="text" class="form-control" name="MaMay">
+                </div>
+                <div class="form-group">
+                    <label for="DongMay">Dong may</label>
+                    <input type="text" class="form-control" name="DongMay">
+                </div>
+                <div class="form-group">
+                    <label for="MaMay">Gia ban</label>
+                    <input type="number" class="form-control" name="GiaBan">
+                </div>
+                <div class="form-group">
+                    <label for="NgaySanXuat">Ngay san xuat</label>
+                    <input type="date" class="form-control" name="NgaySanXuat">
+                </div>
+                <div class="form-group">
+                    <label for="HangSanXuat">Hang san xuat</label>
+                    <input type="text" class="form-control" name="HangSanXuat">
+                </div>
+
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div> <!-- .container -->
+    </div> <!-- .page-section -->
+
+
+</main>
+
+@section LienHe{
+    <div class="col-lg-3 py-3">
+        <h3>Nhat<span class="text-primary">3</span></h3>
+        <p>Le Minh Nhat 3</p>
+
+        <p><a href="#">digigram@mail.com</a></p>
+        <p><a href="#">+00 1122 3344 5566</a></p>
+    </div>
+}

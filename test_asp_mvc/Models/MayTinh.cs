@@ -15,9 +15,10 @@ namespace test_asp_mvc.Models
 
         public List<MayTinh> KhoiTao5May() 
         {
+            // lấy danh sách MayTinh và đặt ten thành danhSachMayTinh
             List<MayTinh> danhSachMayTinh = new List<MayTinh>();
 
-
+            // Add data vào MayTinh
             danhSachMayTinh.Add(new MayTinh()
             {
                 MaMay = "0000001",

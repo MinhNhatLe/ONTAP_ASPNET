@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="Helper\MathHelper.cs" />
     <Compile Include="Models\clsSinhVien.cs" />
+    <Compile Include="Models\DanhSachMayTinh.cs" />
     <Compile Include="Models\MayTinh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -152,6 +153,8 @@
     <Content Include="Views\About\HaiMayGiaCaoNhat.cshtml" />
     <Content Include="Views\About\SapXepGiamDan.cshtml" />
     <Content Include="Views\About\HangAsus.cshtml" />
+    <Content Include="Views\Services\Them.cshtml" />
+    <Content Include="Views\Services\Them2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
