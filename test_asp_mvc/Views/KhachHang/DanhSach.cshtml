@@ -38,7 +38,9 @@
                 <th>
                     @Html.DisplayNameFor(model => model.GioiTinh)
                 </th>
-                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UrlHinhAnh)
+                </th>
             </tr>
 
             @foreach (var item in Model)
@@ -60,9 +62,16 @@
                         @Html.DisplayFor(modelItem => item.GioiTinh)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        <img src="~/assets/img/@item.UrlHinhAnh" style="width:50%; height:100px;" />
+                    </td>
+                    <td>
+                        <a href="~/KhachHang/CapNhat?idKhachHang=@item.ID">
+                            Sua
+                        </a>
+                        |
+                        <a onclick="XoaKhachHang(@item.ID)" href="#">
+                            Xoa
+                        </a>
                     </td>
                 </tr>
             }
@@ -80,3 +89,13 @@
         <p><a href="#">+00 1122 3344 5566</a></p>
     </div>
 }
+
+@section ScriptXoa{
+    <script>
+        var XoaKhachHang = function (idKhachHang) {
+            if (confirm("Co muon xoa khach hang khong?") == true) {
+                location.href = 'Xoa?idKhachHang=' + idKhachHang;
+            }
+        }
+    </script>
+    }

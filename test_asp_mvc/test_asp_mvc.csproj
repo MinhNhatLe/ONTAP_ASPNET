@@ -160,6 +160,7 @@
     <Content Include="Views\Services\Them2.cshtml" />
     <Content Include="Views\KhachHang\DanhSach.cshtml" />
     <Content Include="Views\KhachHang\Themmoi.cshtml" />
+    <Content Include="Views\KhachHang\CapNhat.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -169,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -13,5 +13,6 @@ namespace test_asp_mvc.Models
         public string DiaChiNhanHang { set; get; }
         public string Email { set; get; }
         public string GioiTinh { set; get; }
+        public string UrlHinhAnh { set; get; }
     }
 }

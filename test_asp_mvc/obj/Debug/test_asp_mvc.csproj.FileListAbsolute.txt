@@ -141,3 +141,4 @@ C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.cspr
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.csproj.CopyComplete
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.dll
 C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.pdb
+C:\Users\Minh Nhat\Desktop\test_asp_mvc\test_asp_mvc\obj\Debug\test_asp_mvc.csproj.AssemblyReference.cache

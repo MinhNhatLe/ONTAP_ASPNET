@@ -14,7 +14,7 @@
     <title>Themmoi</title>
 </head>
 <body>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Themmoi", "KhachHang", FormMethod.Post, new { enctype = "multipart/form-data" })) 
     {
         @Html.AntiForgeryToken()
         <div class="container">
@@ -87,6 +87,13 @@
 
 
 
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UrlHinhAnh, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="FileAnh" />
+                        @Html.ValidationMessageFor(model => model.UrlHinhAnh, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
