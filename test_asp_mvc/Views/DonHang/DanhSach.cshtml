@@ -1,0 +1,88 @@
+﻿@model IEnumerable<test_asp_mvc.Models.DonHang>
+
+@{
+    ViewBag.Title = "DanhSach";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    ViewBag.active = 100;
+}
+
+<h2>DanhSach DOn Hang</h2>
+
+<p>
+    <a href="~/DonHang/ThemMoiDonHang">
+        Them moi
+    </a>
+</p>
+<div class="container">
+    <table class="table">
+
+
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenKhachHang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoDienThoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaChiGiaoHang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayDatHang)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenKhachHang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoDienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChiGiaoHang)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDatHang)
+                </td>
+                <td>
+                    <a href="~/DonHang/CapNhat?idDonHang=@item.ID">
+                        Sua
+                    </a>
+                    |
+                    <a onclick="XoaDonHang(@item.ID)" href="#">
+                        Xoa
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+@section LienHe{
+    <div class="col-lg-3 py-3">
+        <h3>Nhat<span class="text-primary">1000</span></h3>
+        <p>Le Minh Nhat 3</p>
+
+        <p><a href="#">digigram@mail.com</a></p>
+        <p><a href="#">+00 1122 3344 5566</a></p>
+    </div>
+}
+@section ScriptXoa{
+    <script>
+        var XoaDonHang = function (idDonHang) {
+            if (confirm("Co muon xoa don hang khong?") == true) {
+                location.href = 'Xoa?idDonHang=' + idDonHang;
+            }
+        }
+    </script>
+}

@@ -125,6 +125,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
@@ -136,8 +137,10 @@
     <Compile Include="Models\clsSinhVien.cs" />
     <Compile Include="Models\DanhSachKhachHang.cs" />
     <Compile Include="Models\DanhSachMayTinh.cs" />
+    <Compile Include="Models\DonHang.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\MayTinh.cs" />
+    <Compile Include="Models\StaticDonHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +164,9 @@
     <Content Include="Views\KhachHang\DanhSach.cshtml" />
     <Content Include="Views\KhachHang\Themmoi.cshtml" />
     <Content Include="Views\KhachHang\CapNhat.cshtml" />
+    <Content Include="Views\DonHang\DanhSach.cshtml" />
+    <Content Include="Views\DonHang\ThemMoiDonHang.cshtml" />
+    <Content Include="Views\DonHang\CapNhat.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
