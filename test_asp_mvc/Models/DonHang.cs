@@ -12,6 +12,6 @@ namespace test_asp_mvc.Models
         public string SoDienThoai { set; get; }
         public string DiaChiGiaoHang { set; get; }
         public DateTime NgayDatHang { set; get; }
-        public List<MayTinh> MayTinhDatMua { set; get; }
+        public List<MayTinh> MayTinhDatMua = new List<MayTinh>();
     }
 }

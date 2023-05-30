@@ -167,6 +167,9 @@
     <Content Include="Views\DonHang\DanhSach.cshtml" />
     <Content Include="Views\DonHang\ThemMoiDonHang.cshtml" />
     <Content Include="Views\DonHang\CapNhat.cshtml" />
+    <Content Include="Views\DonHang\ChiTietDonHang.cshtml" />
+    <Content Include="Views\DonHang\ThemChiTiet.cshtml" />
+    <Content Include="Views\DonHang\CapNhatChiTiet.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

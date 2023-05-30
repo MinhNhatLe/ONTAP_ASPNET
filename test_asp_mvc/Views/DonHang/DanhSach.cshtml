@@ -43,7 +43,9 @@
                     @Html.DisplayFor(modelItem => item.ID)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.TenKhachHang)
+                    <a href="~/DonHang/ChiTietDonHang?IdDonHang=@item.ID">
+                        @Html.DisplayFor(modelItem => item.TenKhachHang)
+                    </a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.SoDienThoai)

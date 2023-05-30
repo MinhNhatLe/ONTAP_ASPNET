@@ -64,5 +64,57 @@ namespace test_asp_mvc.Controllers
             StaticDonHang.DanhSachDonHang.Remove(donHang);
             return RedirectToAction("DanhSach");
         }
+
+
+
+        public ActionResult ChiTietDonHang (int idDonHang)
+        {
+            var donHang = StaticDonHang.DanhSachDonHang.SingleOrDefault(m => m.ID == idDonHang);
+            return View(donHang);
+        }
+
+        public ActionResult ThemChiTiet(int idDonHang)
+        {
+            ViewBag.idDonHang = idDonHang;
+
+            return View(new MayTinh());
+        }
+        [HttpPost]
+        public ActionResult ThemChiTiet(MayTinh chitiet, int idDonHang)
+        {
+            var donHang = StaticDonHang.DanhSachDonHang.SingleOrDefault(m => m.ID == idDonHang);
+            donHang.MayTinhDatMua.Add(chitiet);
+            return RedirectToAction("ChiTietDonHang" , new { idDonHang = idDonHang});
+        }
+
+        public ActionResult CapNhatChiTiet(int idDonHang, string maMay)
+        {
+            ViewBag.idDonHang = idDonHang;
+            var donHang = StaticDonHang.DanhSachDonHang.SingleOrDefault(m => m.ID == idDonHang);
+            var mayTinhCanSua = donHang.MayTinhDatMua.SingleOrDefault(m => m.MaMay == maMay);
+            return View(mayTinhCanSua);
+        }
+
+        [HttpPost]
+        public ActionResult CapNhatChiTiet(MayTinh chitiet, int idDonHang)
+        {
+            var donHang = StaticDonHang.DanhSachDonHang.SingleOrDefault(m => m.ID == idDonHang);
+            var mayTinhCanSua = donHang.MayTinhDatMua.SingleOrDefault(m => m.MaMay == chitiet.MaMay);
+            mayTinhCanSua.DongMay = chitiet.DongMay;
+            mayTinhCanSua.GiaBan = chitiet.GiaBan;
+            mayTinhCanSua.NgaySanXuat = chitiet.NgaySanXuat;
+            mayTinhCanSua.HangSanXuat = chitiet.HangSanXuat;
+            return RedirectToAction("ChiTietDonHang", new { idDonHang = idDonHang });
+        }
+
+        public ActionResult XoaChiTiet(int idDonHang, string maMay)
+        {
+            var donHang = StaticDonHang.DanhSachDonHang.SingleOrDefault(m => m.ID == idDonHang);
+            var mayTinhCanSua = donHang.MayTinhDatMua.SingleOrDefault(m => m.MaMay == maMay);
+            donHang.MayTinhDatMua.Remove(mayTinhCanSua);
+            return RedirectToAction("ChiTietDonHang", new { idDonHang = idDonHang });
+        }
+
+
     }
 }

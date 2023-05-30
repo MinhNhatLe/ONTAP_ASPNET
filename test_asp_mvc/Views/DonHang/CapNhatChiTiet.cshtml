@@ -1,0 +1,71 @@
+﻿@model test_asp_mvc.Models.MayTinh
+
+@{
+    ViewBag.Title = "CapNhatChiTiet";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h2>CapNhatChiTiet</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>MayTinh</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <input name="idDonHang" value="@ViewBag.idDonHang" readonly />
+    <input name="MaMay" value="@Model.MaMay" readonly />
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DongMay, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DongMay, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.DongMay, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.GiaBan, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.GiaBan, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.GiaBan, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.NgaySanXuat, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.NgaySanXuat, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.NgaySanXuat, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.HangSanXuat, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.HangSanXuat, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.HangSanXuat, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+@section LienHe{
+    <div class="col-lg-3 py-3">
+        <h3>Nhat<span class="text-primary">1000</span></h3>
+        <p>Le Minh Nhat 3</p>
+
+        <p><a href="#">digigram@mail.com</a></p>
+        <p><a href="#">+00 1122 3344 5566</a></p>
+    </div>
+}
