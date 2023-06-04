@@ -31,12 +31,12 @@ namespace test_asp_mvc.Controllers
             if(fileAnh.ContentLength > 0)
             {
                 // luufile 
-                string rootFolder = Server.MapPath("");
+                string rootFolder = Server.MapPath("/Data/");
                 string pathEmail = rootFolder + fileAnh.FileName;
                 fileAnh.SaveAs(pathEmail);
 
                 // luu thuoc tinh url hinhanh
-                thongsokhach.UrlHinhAnh = "" + fileAnh.FileName;
+                thongsokhach.UrlHinhAnh = "/Data/" + fileAnh.FileName;
             }
 
 
