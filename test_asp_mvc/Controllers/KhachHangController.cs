@@ -31,8 +31,12 @@ namespace test_asp_mvc.Controllers
             if(fileAnh.ContentLength > 0)
             {
                 // luufile 
+
+                // Map đến thư mục gốc mà mình tạo
                 string rootFolder = Server.MapPath("/Data/");
+                // lấy thư mục gốc + file ảnh
                 string pathEmail = rootFolder + fileAnh.FileName;
+                // lưu vào
                 fileAnh.SaveAs(pathEmail);
 
                 // luu thuoc tinh url hinhanh
